@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  min-height: 100px;
+  background-color: yellow;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main {
+  min-height: calc(100vh - 400px);
+  background-color: red;
+  flex-grow: 1;
+}
+
+.left {
+  min-height: 100px;
+  background-color: green;
+  flex-basis: 200px;
+  order: -1;
+}
+
+.right {
+  min-height: 100px;
+  background-color: blue;
+  flex-basis: 300px;
+}
+
+.footer {
+  min-height: 100px;
+  background-color: magenta;
+}
+
+@media (max-width: 1280px) {
+  .right {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .main {
+    flex-basis: 100%;
+  }
+
+  .right {
+    flex-basis: 50%;
+  }
+
+  .left {
+    flex-basis: 50%;
+    order: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .right {
+    flex-basis: 100%;
+  }
+
+  .left {
+    flex-basis: 100%;
+    order: 0;
+  }
+}
